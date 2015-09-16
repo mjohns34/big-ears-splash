@@ -21,7 +21,7 @@
   'cache_db_session' => '0',
   'cache_db_session_lifetime' => '',
   'cache_default' => '1',
-  'cache_disabled' => '0',
+  'cache_disabled' => '1',
   'cache_expires' => '0',
   'cache_format' => '0',
   'cache_handler' => 'xPDOFileCache',
