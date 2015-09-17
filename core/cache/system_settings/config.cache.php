@@ -30,7 +30,7 @@
   'cache_noncore_lexicon_topics' => '1',
   'cache_resource' => '0',
   'cache_resource_expires' => '0',
-  'cache_scripts' => '1',
+  'cache_scripts' => '0',
   'cache_system_settings' => '1',
   'clear_cache_refresh_trees' => '0',
   'compress_css' => '0',
