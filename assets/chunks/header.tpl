@@ -12,6 +12,7 @@
 				<img src="[[*logo]]" class="logo" />
 				<div class="slider">
 					[[!getSliderImages]]
+					<span class="slider-arrow arrow-left"></span><span class="slider-arrow arrow-right"></span>
 				</div>
 				<nav role="navigation">
 				</nav>

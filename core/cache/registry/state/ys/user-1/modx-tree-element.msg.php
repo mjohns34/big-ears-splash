@@ -5,4 +5,5 @@ return array (
   2 => '/root/n_type_tv',
   3 => '/root/n_type_chunk',
   4 => '/root/n_type_snippet',
+  5 => '/root/n_type_plugin',
 );
