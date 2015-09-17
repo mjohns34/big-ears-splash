@@ -1,6 +1,9 @@
 body {
   background-color: #f2f2f2; }
 
+span {
+  display: inline-block; }
+
 header {
   background: url("../images/big-ears-festival-2016-header.jpg") no-repeat;
   background-size: cover;
@@ -21,7 +24,6 @@ header {
     header .slider span {
       -webkit-transition: all 0.5s;
       transition: all 0.5s;
-      display: inline-block;
       width: 29px;
       height: 29px;
       padding: 0 3px; }
@@ -38,6 +40,7 @@ header {
   header nav {
     clear: both;
     display: inline-block;
+    position: relative;
     margin-top: 35px;
     padding: 30px 50px;
     text-align: center;
@@ -60,6 +63,18 @@ header {
         background: url("../images/see-last-years-event.png") no-repeat; }
         header nav a.last-year:hover {
           background: url("../images/see-last-years-event-hover.png") no-repeat; }
+    header nav span {
+      position: absolute;
+      width: 170px;
+      height: 130px; }
+      header nav span.bird-left {
+        background: url("../images/big-ears-bird-left.png") no-repeat;
+        top: -15px;
+        left: -110px; }
+      header nav span.bird-right {
+        background: url("../images/big-ears-bird-right.png") no-repeat;
+        top: 0;
+        right: -120px; }
 
 .container {
   margin: auto;

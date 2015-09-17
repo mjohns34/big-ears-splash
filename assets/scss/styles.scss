@@ -15,10 +15,16 @@ $secondaryAccent: #4c5438;
 	background: url('../images/#{$filename}') no-repeat;
 }
 
+// General styles
 body {
 	background-color: $primaryBg;
 }
 
+span {
+	display: inline-block;
+}
+
+// Header
 header {
 	@include bg-image('big-ears-festival-2016-header.jpg');
 	background-size: cover;
@@ -44,7 +50,6 @@ header {
 		
 		span {
 			@include default-transition;
-			display: inline-block;
 			width: 29px;
 			height: 29px;
 			padding: 0 3px;
@@ -74,6 +79,7 @@ header {
 	nav {
 		clear: both;
 		display: inline-block;
+		position: relative;
 		margin-top: 35px;
 		padding: 30px 50px;
 		text-align: center;
@@ -103,6 +109,24 @@ header {
 				&:hover {
 					@include bg-image('see-last-years-event-hover.png');
 				}
+			}
+		}
+		
+		span {
+			position: absolute;
+			width: 170px;
+			height: 130px;
+			
+			&.bird-left {
+				@include bg-image('big-ears-bird-left.png');
+				top: -15px;
+				left: -110px;
+			}
+			
+			&.bird-right {
+				@include bg-image('big-ears-bird-right.png');
+				top: 0;
+				right: -120px;
 			}
 		}
 	}
