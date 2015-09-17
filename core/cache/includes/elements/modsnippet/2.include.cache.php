@@ -12,10 +12,9 @@ if ($xml = simplexml_load_string($file, null, LIBXML_NOCDATA)) {
 			$description = $item->description;
 		}
 		
-		$output .= '<h3><a href="' . $item->link . '" target="_blank"><h3>' . $item->title . '</a></h3>' . $description;
+		$output .= '<h3><a href="' . $item->link . '" target="_blank">' . $item->title . '</a></h3>' . $description;
 	}
     
-		
 } 
 return $output;
 return;

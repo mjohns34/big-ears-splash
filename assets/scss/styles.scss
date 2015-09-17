@@ -7,8 +7,11 @@ $secondaryAccent: #4c5438;
 
 // Mixins
 @mixin default-transition() {
-	-webkit-transition: all 0.5s;
-    transition: all 0.5s;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 @mixin bg-image($filename) {
@@ -18,13 +21,25 @@ $secondaryAccent: #4c5438;
 // General styles
 body {
 	background-color: $primaryBg;
+	color: $text;
 }
 
 span {
 	display: inline-block;
 }
 
-.container, main {
+a {
+	@include default-transition;
+	color: $accent;
+	text-decoration: none;
+	
+	&:hover {
+		color: $secondaryAccent;
+		text-decoration: underline;
+	}
+}
+
+main, .container {
 	margin: auto;
 	padding: 35px;
 	max-width: 960px;
@@ -38,8 +53,15 @@ h1 {
 	margin-bottom: 10px;
 }
 
+body, h3 {
+	font-family: 'proxima-nova', 'Helvetica', sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+}
+
 h3 {
-	font-family: 'proxima-nova-bold', sans-serif;
+	color: #000;
+	margin: 6px 0;
 }
 
 // Header
