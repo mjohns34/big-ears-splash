@@ -175,4 +175,25 @@ header {
 // Body
 main {
 	margin-top: 35px;
+	
+	.news-feed {
+		ul {
+			list-style: none;
+			margin-left: 0;
+			padding-left: 0;
+			
+			h3 {
+				line-height: 16px;
+			}
+			
+			p {
+				margin: 0 0 15px 0;
+			}
+			
+			li {
+				margin-bottom: 15px;
+				border-bottom: 1px solid $primaryBorder;
+			}
+		}
+	}
 }

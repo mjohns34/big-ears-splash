@@ -118,5 +118,16 @@ header {
 
 main {
   margin-top: 35px; }
+  main .news-feed ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0; }
+    main .news-feed ul h3 {
+      line-height: 16px; }
+    main .news-feed ul p {
+      margin: 0 0 15px 0; }
+    main .news-feed ul li {
+      margin-bottom: 15px;
+      border-bottom: 1px solid #d3d3d3; }
 
 /*# sourceMappingURL=styles.css.map */
