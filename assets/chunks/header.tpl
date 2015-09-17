@@ -8,6 +8,7 @@
 	</head>
 	<body>
 		<header role="banner">
+			<img src="[[*logo]]" />
 			<nav role="navigation">
 			</nav>
 		</header>
