@@ -9,7 +9,7 @@
 	<body>
 		<header role="banner">
 			<div class="container">
-				<img src="[[*logo]]" />
+				<img src="[[*logo]]" class="logo" />
 				<div class="slider">
 					[[!getSliderImages]]
 				</div>

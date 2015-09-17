@@ -8,10 +8,22 @@ $secondaryAccent: #4c5438;
 header {
 	background: url('../images/big-ears-festival-2016-header.jpg') no-repeat;
 	background-size: cover;
+	
+	.logo {
+		float: left;
+	}
+	
+	.slider {
+		float: right;
+		padding-left: 12px;
+		margin-left: 12px;
+		border-left: 1px solid #fff;
+	}
 }
 
 .container {
 	margin: auto;
 	padding: 35px;
 	max-width: 960px;
+	overflow: hidden;
 }
