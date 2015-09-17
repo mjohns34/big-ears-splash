@@ -28,7 +28,7 @@
   'cache_lang_js' => '1',
   'cache_lexicon_topics' => '1',
   'cache_noncore_lexicon_topics' => '1',
-  'cache_resource' => '1',
+  'cache_resource' => '0',
   'cache_resource_expires' => '0',
   'cache_scripts' => '1',
   'cache_system_settings' => '1',

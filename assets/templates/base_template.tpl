@@ -1,9 +1,3 @@
-<html>
-<head>
-<title>[[++site_name]] - [[*pagetitle]]</title>
-<base href="[[++site_url]]" />
-</head>
-<body>
+[[$header]]
 [[*content]]
-</body>
-</html>
+[[$footer]]
