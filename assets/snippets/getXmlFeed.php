@@ -6,8 +6,8 @@ if ($xml = simplexml_load_string($file, null, LIBXML_NOCDATA)) {
 	
 	foreach ($items as $i => $item) {
 		if ($i >= $num) { break; }
-		if (strlen($item->description) > 80) {
-			$description = '<p>' . trim(preg_replace('/^(.{' . 80 . ',}? ).*$/is', '$1', strip_tags($item->description))) . '...</p>';
+		if (strlen($item->description) > 90) {
+			$description = '<p>' . trim(preg_replace('/^(.{' . 90 . ',}? ).*$/is', '$1', strip_tags($item->description))) . '...</p>';
 		} else {
 			$description = $item->description;
 		}

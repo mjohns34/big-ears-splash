@@ -50,7 +50,7 @@ h1 {
 	font-size: 32px;
 	line-height: 37px;
 	color: #000;
-	margin-bottom: 10px;
+	margin: 0 0 10px 0;
 }
 
 body, h3 {
@@ -177,6 +177,9 @@ main {
 	margin-top: 35px;
 	
 	.news-feed {
+		float: left;
+		max-width: 365px;
+		
 		ul {
 			list-style: none;
 			margin-left: 0;
@@ -194,6 +197,15 @@ main {
 				margin-bottom: 15px;
 				border-bottom: 1px solid $primaryBorder;
 			}
+		}
+	}
+	
+	.video {
+		float: right;
+		
+		iframe {
+			width: 545px; 
+			height: 300px;
 		}
 	}
 }
