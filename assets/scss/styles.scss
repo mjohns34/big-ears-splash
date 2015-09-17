@@ -11,9 +11,19 @@ $secondaryAccent: #4c5438;
     transition: all 0.5s;
 }
 
+@mixin bg-image($filename) {
+	background: url('../images/#{$filename}') no-repeat;
+}
+
+body {
+	background-color: $primaryBg;
+}
+
 header {
-	background: url('../images/big-ears-festival-2016-header.jpg') no-repeat;
+	@include bg-image('big-ears-festival-2016-header.jpg');
 	background-size: cover;
+	text-align: center;
+	max-height: 350px;
 	
 	.logo {
 		float: left;
@@ -21,6 +31,7 @@ header {
 	
 	.slider {
 		float: right;
+		text-align: left;
 		padding-left: 24px;
 		margin-left: 24px;
 		border-left: 1px solid #fff;
@@ -31,7 +42,7 @@ header {
 			padding-left: 0;
 		}
 		
-		.slider-arrow {
+		span {
 			@include default-transition;
 			display: inline-block;
 			width: 29px;
@@ -43,18 +54,54 @@ header {
 			}
 			
 			&.arrow-left {
-				background: url('../images/slider-arrow-left.png') no-repeat;
+				@include bg-image('slider-arrow-left.png');
 				
 				&:hover {
-					background: url('../images/slider-arrow-left-hover.png') no-repeat;
+					@include bg-image('slider-arrow-left-hover.png');
 				}	
 			}
 			
 			&.arrow-right {
-				background: url('../images/slider-arrow-right.png') no-repeat;
+				@include bg-image('slider-arrow-right.png');
 				
 				&:hover {
-					background: url('../images/slider-arrow-right-hover.png') no-repeat;
+					@include bg-image('slider-arrow-right-hover.png');
+				}
+			}
+		}
+	}
+	
+	nav {
+		clear: both;
+		display: inline-block;
+		margin-top: 35px;
+		padding: 30px 50px;
+		text-align: center;
+		background: url('../images/gradient-repeater.jpg') repeat-x;
+		-webkit-box-shadow: 0px -12px 20px 0px rgba(0,0,0,0.25);
+		-moz-box-shadow: 0px -12px 20px 0px rgba(0,0,0,0.25);
+		box-shadow: 0px -12px 20px 0px rgba(0,0,0,0.25);
+		
+		a {
+			@include default-transition;
+			display: inline-block;
+			width: 320px;
+			height: 82px;
+			
+			&.tickets {
+				@include bg-image('buy-2016-pre-sale-tickets.png');
+				padding-right: 30px;
+				
+				&:hover {
+					@include bg-image('buy-2016-pre-sale-tickets-hover.png');
+				}
+			}
+			
+			&.last-year {
+				@include bg-image('see-last-years-event.png');
+				
+				&:hover {
+					@include bg-image('see-last-years-event-hover.png');
 				}
 			}
 		}
@@ -65,5 +112,5 @@ header {
 	margin: auto;
 	padding: 35px;
 	max-width: 960px;
-	overflow: hidden;
+	//overflow: hidden;
 }
