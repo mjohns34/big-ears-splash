@@ -5,6 +5,12 @@ $primaryBorder: #d3d3d3;
 $accent: #7f873f;
 $secondaryAccent: #4c5438;
 
+// Mixins
+@mixin default-transition() {
+	-webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
 header {
 	background: url('../images/big-ears-festival-2016-header.jpg') no-repeat;
 	background-size: cover;
@@ -26,17 +32,30 @@ header {
 		}
 		
 		.slider-arrow {
+			@include default-transition;
 			display: inline-block;
 			width: 29px;
 			height: 29px;
 			padding: 0 3px;
 			
+			&:hover {
+				cursor: pointer;
+			}
+			
 			&.arrow-left {
-				background: url('../images/slider-arrow-left.png') no-repeat;	
+				background: url('../images/slider-arrow-left.png') no-repeat;
+				
+				&:hover {
+					background: url('../images/slider-arrow-left-hover.png') no-repeat;
+				}	
 			}
 			
 			&.arrow-right {
 				background: url('../images/slider-arrow-right.png') no-repeat;
+				
+				&:hover {
+					background: url('../images/slider-arrow-right-hover.png') no-repeat;
+				}
 			}
 		}
 	}

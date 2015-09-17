@@ -13,14 +13,22 @@ header {
       margin-left: 0;
       padding-left: 0; }
     header .slider .slider-arrow {
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s;
       display: inline-block;
       width: 29px;
       height: 29px;
       padding: 0 3px; }
+      header .slider .slider-arrow:hover {
+        cursor: pointer; }
       header .slider .slider-arrow.arrow-left {
         background: url("../images/slider-arrow-left.png") no-repeat; }
+        header .slider .slider-arrow.arrow-left:hover {
+          background: url("../images/slider-arrow-left-hover.png") no-repeat; }
       header .slider .slider-arrow.arrow-right {
         background: url("../images/slider-arrow-right.png") no-repeat; }
+        header .slider .slider-arrow.arrow-right:hover {
+          background: url("../images/slider-arrow-right-hover.png") no-repeat; }
 
 .container {
   margin: auto;
