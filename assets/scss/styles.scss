@@ -7,4 +7,11 @@ $secondaryAccent: #4c5438;
 
 header {
 	background: url('../images/big-ears-festival-2016-header.jpg') no-repeat;
+	background-size: cover;
+}
+
+.container {
+	margin: auto;
+	padding: 35px;
+	max-width: 960px;
 }

@@ -8,8 +8,13 @@
 	</head>
 	<body>
 		<header role="banner">
-			<img src="[[*logo]]" />
-			<nav role="navigation">
-			</nav>
+			<div class="container">
+				<img src="[[*logo]]" />
+				<div class="slider">
+					[[!getSliderImages]]
+				</div>
+				<nav role="navigation">
+				</nav>
+			</div>
 		</header>
 		<main role="main">
