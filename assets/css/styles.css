@@ -117,7 +117,8 @@ header {
         right: -120px; }
 
 main {
-  margin-top: 35px; }
+  margin-top: 45px;
+  overflow: hidden; }
   main .news-feed {
     float: left;
     max-width: 365px; }
@@ -137,5 +138,20 @@ main {
     main .video iframe {
       width: 545px;
       height: 300px; }
+
+footer {
+  background: url("../images/big-ears-splash-footer.jpg") no-repeat;
+  background-size: cover;
+  clear: both; }
+  footer .container {
+    padding: 25px 35px; }
+  footer h1 {
+    display: inline-block;
+    margin-bottom: 0;
+    width: 25%;
+    text-align: center; }
+  footer .email-form {
+    display: inline-block;
+    width: 50%; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,4 +1,4 @@
-// Global styles
+// Hex colors
 $text: #686b72;
 $primaryBg: #f2f2f2;
 $primaryBorder: #d3d3d3;
@@ -174,7 +174,8 @@ header {
 
 // Body
 main {
-	margin-top: 35px;
+	margin-top: 45px;
+	overflow: hidden;
 	
 	.news-feed {
 		float: left;
@@ -207,5 +208,28 @@ main {
 			width: 545px; 
 			height: 300px;
 		}
+	}
+}
+
+// Footer
+footer {
+	@include bg-image('big-ears-splash-footer.jpg');
+	background-size: cover;
+	clear: both;
+	
+	.container {
+		padding: 25px 35px;
+	}
+	
+	h1 {
+		display: inline-block;
+		margin-bottom: 0;
+		width: 25%;
+		text-align: center;
+	}
+	
+	.email-form {
+		display: inline-block;
+		width: 50%;
 	}
 }

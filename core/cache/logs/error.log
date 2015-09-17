@@ -2,3 +2,4 @@
 [2015-09-17 02:03:49] (ERROR @ /big-ears-splash/connectors/modx.config.js.php) Error caching lexicon topic lexicon/en/core/resource
 [2015-09-17 06:26:11] (ERROR @ /Applications/MAMP/htdocs/big-ears-splash/core/cache/includes/elements/modsnippet/2.include.cache.php : 6) PHP warning: SimpleXMLElement::xpath(): Invalid expression
 [2015-09-17 06:26:11] (ERROR @ /Applications/MAMP/htdocs/big-ears-splash/core/cache/includes/elements/modsnippet/2.include.cache.php : 6) PHP warning: SimpleXMLElement::xpath(): xmlXPathEval: evaluation failed
+[2015-09-17 07:39:05] (ERROR @ /big-ears-splash/connectors/lang.js.php) Error caching lexicon topic lexicon/en/core/resource
