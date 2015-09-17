@@ -4,6 +4,21 @@ body {
 span {
   display: inline-block; }
 
+.container, main {
+  margin: auto;
+  padding: 35px;
+  max-width: 960px; }
+
+h1 {
+  font-family: 'nimbus-sans-condensed', 'Helvetica', sans-serif;
+  font-size: 32px;
+  line-height: 37px;
+  color: #000;
+  margin-bottom: 10px; }
+
+h3 {
+  font-family: 'proxima-nova-bold', sans-serif; }
+
 header {
   background: url("../images/big-ears-festival-2016-header.jpg") no-repeat;
   background-size: cover;
@@ -76,9 +91,7 @@ header {
         top: 0;
         right: -120px; }
 
-.container {
-  margin: auto;
-  padding: 35px;
-  max-width: 960px; }
+main {
+  margin-top: 35px; }
 
 /*# sourceMappingURL=styles.css.map */
