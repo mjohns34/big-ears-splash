@@ -1,6 +1,7 @@
 body {
   background-color: #f2f2f2;
-  color: #686b72; }
+  color: #686b72;
+  overflow-x: hidden; }
 
 span {
   display: inline-block; }
@@ -231,5 +232,77 @@ footer {
         footer .social-icons span.instagram:hover {
           background: url("../images/big-ears-instagram-hover@2x.png") no-repeat;
           background-size: contain; }
+
+@media screen and (max-width: 1060px) {
+  header {
+    background-size: contain; } }
+@media screen and (max-width: 985px) {
+  header {
+    background-size: cover; }
+    header .logo {
+      max-width: 55%; } }
+@media screen and (max-width: 964px) {
+  main .video iframe {
+    width: 409px;
+    height: 225px; }
+
+  footer .email-form form input[type="email"] {
+    width: 60%; } }
+@media screen and (max-width: 859px) {
+  .container {
+    padding-bottom: 0; }
+
+  header {
+    max-height: none;
+    background-size: contain; }
+    header .slider {
+      margin-bottom: 24px; }
+    header nav {
+      display: block;
+      margin: 0 -35px;
+      background: #f2f2f2;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+      header nav a {
+        display: block;
+        margin: auto; }
+        header nav a.tickets {
+          padding-right: 0;
+          padding-bottom: 32px; }
+      header nav span {
+        display: none; } }
+@media screen and (max-width: 836px) {
+  header {
+    background-size: cover; }
+    header .logo, header .slider {
+      float: none;
+      text-align: center; }
+    header .slider {
+      padding-left: 0;
+      margin-left: 0;
+      border-left: none; }
+
+  main {
+    margin-top: 0;
+    padding: 0 35px; }
+    main .news-feed {
+      float: none;
+      width: auto;
+      margin-bottom: 24px; }
+    main .video {
+      float: none;
+      text-align: center;
+      margin-bottom: 24px; }
+      main .video iframe {
+        width: 545px;
+        height: 300px; }
+
+  footer .footer-text, footer .social-icons {
+    width: auto;
+    float: none; }
+  footer .email-form {
+    float: none;
+    width: auto; } }
 
 /*# sourceMappingURL=styles.css.map */
