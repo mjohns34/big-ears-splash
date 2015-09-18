@@ -8,20 +8,17 @@ $modx->getService('error','error.modError', '', '');
 try {
 	if ( filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ) {
 		$email = $_POST['email'];
-/*
-		$table = $modx->getFullTableName('signups');
-		$fields = array(
-			'email' => $email,
-			'timestamp' => time()
-		);
-		$modx->exec('INSERT INTO ' . $table . ' (email, timestamp) VALUES (' . $email . ', ' . time());
-*/
+		$time = date('Y-m-d H:i:s', time());
+		
 		try {
-			$db = new PDO('mysql:host=localhost;dbname=big_ears_splash_signups', 'root', 'root');
+			// Custom DB credentials are defined in config.core.php
+			$db = new PDO('mysql:host=' . MODX_SIGNUP_DB_HOST . ';dbname=' . MODX_SIGNUP_DB_NAME, MODX_SIGNUP_DB_USER, MODX_SIGNUP_DB_PASS);
+			
 			$insert = $db->prepare('INSERT INTO signups (email, timestamp) VALUES (?, ?)');
 			$insert->bindParam(1, $email);
-			$insert->bindParam(2, date('Y-m-d H:i:s', time()));
+			$insert->bindParam(2, $time);
 			if ($insert->execute()) {
+				mail('miranda.j.johnson@gmail.com', 'New Email Signup', 'New email signup from ' . $email . ' at ' . $time);
 				header("Content-type: application/json");
 				echo json_encode('success');
 			} else {
