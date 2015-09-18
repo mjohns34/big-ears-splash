@@ -23,20 +23,49 @@ main, .container {
   max-width: 960px; }
 
 h1 {
-  font-family: 'nimbus-sans-condensed', 'Helvetica', sans-serif;
+  font-family: "nimbus-sans-condensed", "Helvetica", sans-serif;
   font-size: 32px;
   line-height: 37px;
   color: #000;
   margin: 0 0 10px 0; }
 
 body, h3 {
-  font-family: 'proxima-nova', 'Helvetica', sans-serif;
+  font-family: "proxima-nova", "Helvetica", sans-serif;
   font-size: 16px;
   line-height: 20px; }
 
 h3 {
   color: #000;
   margin: 6px 0; }
+
+input[type="submit"] {
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  font-family: "nimbus-sans-condensed", "Helvetica", sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  background-color: #7f873f;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 15px;
+  text-transform: uppercase; }
+  input[type="submit"]:hover {
+    background-color: #4c5438; }
+
+input::-webkit-input-placeholder {
+  color: #686b72; }
+
+input:-moz-placeholder {
+  color: #686b72; }
+
+input::-moz-placeholder {
+  color: #686b72; }
+
+input:-ms-input-placeholder {
+  color: #686b72; }
 
 header {
   background: url("../images/big-ears-festival-2016-header.jpg") no-repeat;
@@ -144,14 +173,58 @@ footer {
   background-size: cover;
   clear: both; }
   footer .container {
+    overflow: hidden;
     padding: 25px 35px; }
-  footer h1 {
-    display: inline-block;
+  footer .footer-text, footer .social-icons {
+    width: 27.5%;
+    float: left; }
+  footer .footer-text h1 {
     margin-bottom: 0;
-    width: 25%;
-    text-align: center; }
+    text-align: center;
+    line-height: normal; }
   footer .email-form {
-    display: inline-block;
-    width: 50%; }
+    float: left;
+    width: 45%; }
+    footer .email-form form {
+      overflow: hidden; }
+      footer .email-form form input {
+        float: left; }
+      footer .email-form form input[type="email"] {
+        width: 70%;
+        background-color: #f2f2f2;
+        border: 1px solid #fff;
+        padding: 10px 15px; }
+  footer .social-icons {
+    text-align: center; }
+    footer .social-icons a {
+      padding: 5px; }
+    footer .social-icons a, footer .social-icons span {
+      display: inline-block;
+      width: 35px;
+      height: 35px; }
+    footer .social-icons span {
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      -ms-transition: all .2s ease-in-out;
+      -o-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out; }
+      footer .social-icons span.facebook {
+        background: url("../images/big-ears-facebook@2x.png") no-repeat;
+        background-size: contain; }
+        footer .social-icons span.facebook:hover {
+          background: url("../images/big-ears-facebook-hover@2x.png") no-repeat;
+          background-size: contain; }
+      footer .social-icons span.twitter {
+        background: url("../images/big-ears-twitter@2x.png") no-repeat;
+        background-size: contain; }
+        footer .social-icons span.twitter:hover {
+          background: url("../images/big-ears-twitter-hover@2x.png") no-repeat;
+          background-size: contain; }
+      footer .social-icons span.instagram {
+        background: url("../images/big-ears-instagram@2x.png") no-repeat;
+        background-size: contain; }
+        footer .social-icons span.instagram:hover {
+          background: url("../images/big-ears-instagram-hover@2x.png") no-repeat;
+          background-size: contain; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -4,6 +4,8 @@ $primaryBg: #f2f2f2;
 $primaryBorder: #d3d3d3;
 $accent: #7f873f;
 $secondaryAccent: #4c5438;
+$fontHeader: 'nimbus-sans-condensed', 'Helvetica', sans-serif;
+$fontBody: 'proxima-nova', 'Helvetica', sans-serif;
 
 // Mixins
 @mixin default-transition() {
@@ -46,7 +48,7 @@ main, .container {
 }
 
 h1 {
-	font-family: 'nimbus-sans-condensed', 'Helvetica', sans-serif;
+	font-family: $fontHeader;
 	font-size: 32px;
 	line-height: 37px;
 	color: #000;
@@ -54,7 +56,7 @@ h1 {
 }
 
 body, h3 {
-	font-family: 'proxima-nova', 'Helvetica', sans-serif;
+	font-family: $fontBody;
 	font-size: 16px;
 	line-height: 20px;
 }
@@ -62,6 +64,35 @@ body, h3 {
 h3 {
 	color: #000;
 	margin: 6px 0;
+}
+
+input[type="submit"] {
+	@include default-transition;
+	font-family: $fontHeader;
+	font-size: 18px;
+	line-height: 20px;
+	background-color: $accent;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 10px 15px;
+	text-transform: uppercase;
+	
+	&:hover {
+		background-color: $secondaryAccent;
+	}
+}
+
+input::-webkit-input-placeholder {
+	color: $text;
+}
+input:-moz-placeholder {
+	color: $text;
+}
+input::-moz-placeholder {
+	color: $text;
+}
+input:-ms-input-placeholder {
+	color: $text;
 }
 
 // Header
@@ -218,18 +249,83 @@ footer {
 	clear: both;
 	
 	.container {
+		overflow: hidden;
 		padding: 25px 35px;
 	}
 	
-	h1 {
-		display: inline-block;
-		margin-bottom: 0;
-		width: 25%;
-		text-align: center;
+	.footer-text, .social-icons {
+		width: 27.5%;
+		float: left;
+	}
+	
+	.footer-text {
+		h1 {
+			margin-bottom: 0;
+			text-align: center;
+			line-height: normal;
+		}
 	}
 	
 	.email-form {
-		display: inline-block;
-		width: 50%;
+		float: left;
+		width: 45%;
+		
+		form {
+			overflow: hidden;
+			
+			input {
+				float: left;
+			}
+			
+			input[type="email"] {
+				width: 70%;
+				background-color: $primaryBg;
+				border: 1px solid #fff;
+				padding: 10px 15px;
+			}
+		}
 	}
+	
+	.social-icons {
+		text-align: center;
+		
+		a {
+			padding: 5px;	
+		}
+		a, span {
+			display: inline-block;
+			width: 35px;
+			height: 35px;
+		}
+		span {
+			@include default-transition;
+			
+			&.facebook {
+				@include bg-image('big-ears-facebook@2x.png');
+				background-size: contain;
+				&:hover {
+					@include bg-image('big-ears-facebook-hover@2x.png');
+					background-size: contain;
+				}
+			}
+			
+			&.twitter {
+				@include bg-image('big-ears-twitter@2x.png');
+				background-size: contain;
+				&:hover {
+					@include bg-image('big-ears-twitter-hover@2x.png');
+					background-size: contain;
+				}
+			}
+			
+			&.instagram {
+				@include bg-image('big-ears-instagram@2x.png');
+				background-size: contain;
+				&:hover {
+					@include bg-image('big-ears-instagram-hover@2x.png');
+					background-size: contain;
+				}
+			}
+		}
+	}	
 }
