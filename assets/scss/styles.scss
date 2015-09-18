@@ -271,7 +271,7 @@ footer {
 		width: 45%;
 		
 		form {
-			overflow: hidden;
+			position: relative;
 			
 			input {
 				float: left;
@@ -282,6 +282,13 @@ footer {
 				background-color: $primaryBg;
 				border: 1px solid #fff;
 				padding: 10px 15px;
+			}
+			
+			label {
+				position: absolute;
+				left: 15px;
+				top: 45px;
+				color: $secondaryAccent;
 			}
 		}
 	}

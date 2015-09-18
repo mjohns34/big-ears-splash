@@ -14,5 +14,8 @@
 				</div>
 			</div>
 		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="assets/js/jquery.validate.min.js"></script>
+		<script src="assets/js/form-processor.js"></script>
 </body>
 </html>

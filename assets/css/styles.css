@@ -186,7 +186,7 @@ footer {
     float: left;
     width: 45%; }
     footer .email-form form {
-      overflow: hidden; }
+      position: relative; }
       footer .email-form form input {
         float: left; }
       footer .email-form form input[type="email"] {
@@ -194,6 +194,11 @@ footer {
         background-color: #f2f2f2;
         border: 1px solid #fff;
         padding: 10px 15px; }
+      footer .email-form form label {
+        position: absolute;
+        left: 15px;
+        top: 45px;
+        color: #4c5438; }
   footer .social-icons {
     text-align: center; }
     footer .social-icons a {
