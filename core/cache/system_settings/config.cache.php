@@ -203,7 +203,7 @@
     <p>Once you log into the MODX Manager at [[+surl]], you can change your password.</p>
 
     <p>Regards,<br />Site Administrator</p>',
-  'site_name' => 'MODX Revolution',
+  'site_name' => 'Big Ears',
   'site_start' => '1',
   'site_status' => '1',
   'site_unavailable_message' => 'The site is currently unavailable',
