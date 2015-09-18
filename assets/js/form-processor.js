@@ -1,3 +1,10 @@
+/*
+ *	Validates and processes the form data from the email signup in the footer
+ *	Requires jquery.validate plugin
+ *		@author Miranda Johnson miranda.j.johnson@gmail.com
+ *		@date 09/17/2015
+*/
+
 function ajax() {
 	
 	var request = {};

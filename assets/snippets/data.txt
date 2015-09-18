@@ -1,0 +1,5 @@
+Array
+(
+    [email] => miranda@johnson.com
+    [submit] => Sign Up
+)
