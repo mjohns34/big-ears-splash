@@ -85,6 +85,10 @@ header {
       list-style: none;
       margin-left: 0;
       padding-left: 0; }
+      header .slider ul li {
+        display: none; }
+      header .slider ul li:first-child {
+        display: block; }
     header .slider span {
       -webkit-transition: all .2s ease-in-out;
       -moz-transition: all .2s ease-in-out;
@@ -139,13 +143,38 @@ header {
       height: 130px; }
       header nav span.bird-left {
         background: url("../images/big-ears-bird-left.png") no-repeat;
+        -webkit-animation: "slide-right" 0.5s forwards;
+        -webkit-animation-delay: 2s;
+        animation: "slide-right" 0.5s forwards;
+        animation-delay: 0.5s;
         top: -15px;
-        left: -110px; }
+        left: -600px; }
+@-moz-keyframes slide-right {
+  100% {
+    left: -110px; } }
+@-webkit-keyframes slide-right {
+  100% {
+    left: -110px; } }
+@keyframes slide-right {
+  100% {
+    left: -110px; } }
       header nav span.bird-right {
         background: url("../images/big-ears-bird-right.png") no-repeat;
+        -webkit-animation: "slide-left" 0.5s forwards;
+        -webkit-animation-delay: 2s;
+        animation: "slide-left" 0.5s forwards;
+        animation-delay: 0.5s;
         top: 0;
-        right: -120px; }
-
+        right: -520px; }
+@-moz-keyframes slide-left {
+  100% {
+    right: -120px; } }
+@-webkit-keyframes slide-left {
+  100% {
+    right: -120px; } }
+@keyframes slide-left {
+  100% {
+    right: -120px; } }
 main {
   margin-top: 45px;
   overflow: hidden; }
@@ -276,6 +305,7 @@ footer {
   header {
     background-size: cover; }
     header .logo, header .slider {
+      max-width: 100%;
       float: none;
       text-align: center; }
     header .slider {
@@ -298,11 +328,32 @@ footer {
         width: 545px;
         height: 300px; }
 
+  footer .container {
+    text-align: center; }
   footer .footer-text, footer .social-icons {
     width: auto;
     float: none; }
   footer .email-form {
     float: none;
-    width: auto; } }
+    display: inline-block;
+    width: auto;
+    overflow: hidden;
+    margin: 24px 0; }
+    footer .email-form form input[type="email"] {
+      width: auto; } }
+@media screen and (max-width: 545px) {
+  main, .container {
+    padding: 15px; }
+
+  header nav {
+    margin-bottom: -35px; }
+  header .logo, header .slider {
+    text-align: left; }
+  header .slider ul {
+    margin-bottom: 0; }
+
+  main .video iframe {
+    width: 325px;
+    height: 190px; } }
 
 /*# sourceMappingURL=styles.css.map */

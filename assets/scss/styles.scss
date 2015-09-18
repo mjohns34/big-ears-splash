@@ -20,6 +20,13 @@ $fontBody: 'proxima-nova', 'Helvetica', sans-serif;
 	background: url('../images/#{$filename}') no-repeat;
 }
 
+@mixin animation($name) {
+	-webkit-animation: $name 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: $name 0.5s forwards;
+    animation-delay: 0.5s;	
+}
+
 // General styles
 body {
 	background-color: $primaryBg;
@@ -118,6 +125,14 @@ header {
 			list-style: none;
 			margin-left: 0;
 			padding-left: 0;
+			
+			li {
+				display: none;
+			}
+			
+			li:first-child {
+				display: block;
+			}
 		}
 		
 		span {
@@ -191,14 +206,40 @@ header {
 			
 			&.bird-left {
 				@include bg-image('big-ears-bird-left.png');
+				@include animation('slide-right');
 				top: -15px;
-				left: -110px;
+				left: -600px;
+				
+				@-moz-keyframes slide-right {
+				    100% { left: -110px; }
+				}
+			    
+			    @-webkit-keyframes slide-right {
+				    100% { left: -110px; }
+				}
+				
+				@keyframes slide-right {
+				    100% { left: -110px; }
+				}
 			}
 			
 			&.bird-right {
 				@include bg-image('big-ears-bird-right.png');
+				@include animation ('slide-left');
 				top: 0;
-				right: -120px;
+				right: -520px;
+				
+				@-moz-keyframes slide-left {
+				    100% { right: -120px; }
+				}
+			    
+			    @-webkit-keyframes slide-left {
+				    100% { right: -120px; }
+				}
+				
+				@keyframes slide-left {
+				    100% { right: -120px; }
+				}
 			}
 		}
 	}
@@ -419,6 +460,7 @@ footer {
 		background-size: cover;
 
 		.logo, .slider {
+			max-width: 100%;
 			float: none;
 			text-align: center;
 		}
@@ -452,7 +494,11 @@ footer {
 		}
 	}
 	
-	footer {	
+	footer {
+		.container {
+			text-align: center;
+		}
+		
 		.footer-text, .social-icons {
 			width: auto;
 			float: none;
@@ -460,7 +506,47 @@ footer {
 				
 		.email-form {
 			float: none;
+			display: inline-block;
 			width: auto;
+			overflow: hidden;
+			margin: 24px 0;
+			
+			form {
+				input[type="email"] {
+					width: auto;
+				}
+			}
 		}	
+	}
+}
+
+@media screen and (max-width: 545px) {
+	main, .container {
+		padding: 15px;
+	}
+	
+	header {
+		nav {
+			margin-bottom: -35px;
+		}
+		
+		.logo, .slider {
+			text-align: left;
+		}
+		
+		.slider {
+			ul {
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+	main {
+		.video {		
+			iframe {
+				width: 325px; 
+				height: 190px;
+			}
+		}
 	}
 }
