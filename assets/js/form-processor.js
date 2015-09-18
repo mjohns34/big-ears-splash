@@ -6,8 +6,11 @@ function ajax() {
 	request.data = $('form').serialize();
 	request.dataType = 'json';
 	request.success = function(response) {
-		$('form').append('<label>Thank you for signing up!</label>');
-		console.log(response);
+		if (response == 'success') {
+			$('form').append('<label class="confirm">Thank you for signing up!</label>');
+		} else {
+			$('form').append('<label class="confirm">This email address is already registered.</label>');
+		}
 	};
 	
 	$.ajax(request);
@@ -29,7 +32,7 @@ $(document).ready(function() {
 		submitHandler: function(form) {
 			ajax();
 			$( '#email' ).val( '' );
-
+			$( '.confirm' ).empty();
 	  	}
 	});
 

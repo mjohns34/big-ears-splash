@@ -3,3 +3,4 @@
 [2015-09-17 06:26:11] (ERROR @ /Applications/MAMP/htdocs/big-ears-splash/core/cache/includes/elements/modsnippet/2.include.cache.php : 6) PHP warning: SimpleXMLElement::xpath(): Invalid expression
 [2015-09-17 06:26:11] (ERROR @ /Applications/MAMP/htdocs/big-ears-splash/core/cache/includes/elements/modsnippet/2.include.cache.php : 6) PHP warning: SimpleXMLElement::xpath(): xmlXPathEval: evaluation failed
 [2015-09-17 07:39:05] (ERROR @ /big-ears-splash/connectors/lang.js.php) Error caching lexicon topic lexicon/en/core/resource
+[2015-09-18 03:35:13] (ERROR @ /big-ears-splash/assets/snippets/formProcessor.php) [formProcessor] Invalid email address provided
