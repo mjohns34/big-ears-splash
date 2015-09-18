@@ -1,4 +1,11 @@
 <?php
+/*
+ *	Processes the form data from email signup form, inserts into database & sends email
+ *		@author Miranda Johnson miranda.j.johnson@gmail.com
+ *		@date 09/17/2015
+*/
+
+// Load ModX libraries
 require_once '../../config.core.php';
 require_once MODX_CORE_PATH . 'model/modx/modx.class.php';
 $modx = new modX();
@@ -18,10 +25,14 @@ try {
 			$insert->bindParam(1, $email);
 			$insert->bindParam(2, $time);
 			if ($insert->execute()) {
+				// Send email
 				mail('miranda.j.johnson@gmail.com', 'New Email Signup', 'New email signup from ' . $email . ' at ' . $time);
+				
+				// Return success to the JS file
 				header("Content-type: application/json");
 				echo json_encode('success');
 			} else {
+				// Return failure to the JS file
 				header("Content-type: application/json");
 				echo json_encode('failure');
 			}
