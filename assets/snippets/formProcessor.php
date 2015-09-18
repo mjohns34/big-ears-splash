@@ -26,7 +26,7 @@ try {
 			$insert->bindParam(2, $time);
 			if ($insert->execute()) {
 				// Send email
-				mail('miranda.j.johnson@gmail.com', 'New Email Signup', 'New email signup from ' . $email . ' at ' . $time);
+				mail('jmills@thinkpyxl.com', 'New Email Signup', 'New email signup from ' . $email . ' at ' . $time);
 				
 				// Return success to the JS file
 				header("Content-type: application/json");
