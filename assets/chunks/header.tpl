@@ -3,7 +3,7 @@
 	<head>
 		<title>[[++site_name]] - [[*pagetitle]]</title>
 		<base href="[[++site_url]]" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 		<script src="https://use.typekit.net/uxc6ivz.js"></script>
